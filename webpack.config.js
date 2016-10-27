@@ -1,4 +1,6 @@
-module.exports = {
+var config;
+
+config = {
     entry: './App.js', // arquivo de entrada da aplicação
     output: {
         filename: 'build/bundle.js' // arquivo que será gerado
@@ -16,3 +18,5 @@ module.exports = {
         ]
     }
 }
+
+module.exports = config;
