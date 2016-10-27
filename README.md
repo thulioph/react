@@ -17,7 +17,7 @@ Algumas anotações a respeito do estudo com React.
 
 - `npm init`
 - `npm install --save react react-dom react-router`
-- `npm install --save-dev babel-core babel-loader babel-preset-react`
+- `npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-es2015`
 - `npm install --save-dev webpack http-server webpack-dev-server`
 - `npm install webpack -g`
 
@@ -89,3 +89,12 @@ O objeto de estado é interno de um determinado componente, contém os dados que
 Composição é a combinação de pequenos componentes para formar algo maior.
 
 > observe o arquivo **PhotoGallery.js** que contém o exemplo de utilização de composição
+
+
+### Links úteis
+
+- http://hugobessa.com.br/2015/01/17/comecando-com-react/
+- https://medium.com/tableless/hello-world-com-react-desde-o-rascunho-7629bd801d3e
+- https://github.com/reactjs/react-router-tutorial
+- https://medium.com/@dabit3/beginner-s-guide-to-react-router-53094349669
+- https://css-tricks.com/learning-react-router/

@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './app/App.js', // arquivo de entrada da aplicação
+    entry: './App.js', // arquivo de entrada da aplicação
     output: {
         filename: 'build/bundle.js' // arquivo que será gerado
     },
@@ -10,7 +10,7 @@ module.exports = {
                 exclude: /node_modules/, // node_modules não estará nos testes
                 loader: 'babel', // o babel será responsável pelo transpiler
                 query: {
-                    presets: ['react'] // o babel irá compilar o react
+                    presets: ['es2015', 'react'] // o babel irá compilar o react
                 }
             }
         ]
