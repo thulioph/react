@@ -3,15 +3,16 @@
 // e uma legenda
 //
 
-var React, LikePhoto;
+var React, LikePhoto, CatsApi;
 
 React = require('react');
+CatsApi = require('../services/CatsApi.js');
 
 LikePhoto = React.createClass({
     getInitialState: function() {
         return {
             liked: false
-        }
+        };
     },
 
     toggleLiked: function() {
@@ -22,14 +23,29 @@ LikePhoto = React.createClass({
         console.warn('Curti a foto com o ID:', this.props.id);
     },
 
+    handleSubmit: function() {
+        CatsApi.get().then(function(result) {
+            this.props.updateUser(result.data);
+        }.bind(this));
+    },
+
     render: function() {
         var buttonClass;
 
         buttonClass = this.state.liked ? 'active' : 'inactive';
 
         return (
+
                 <div className="thumb">
-                    <img src={this.props.src} />
+                    <button
+                        onClick={this.handleSubmit}>
+
+                        get cats
+                    </button>
+
+                    <img
+                        src={this.props.src}
+                    />
 
                     <div className="bar">
                         <button
@@ -37,6 +53,7 @@ LikePhoto = React.createClass({
                             className={buttonClass}>
                             ♥
                         </button>
+
                         <span>{this.props.caption}</span>
                     </div>
                 </div>

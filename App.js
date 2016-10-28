@@ -18,10 +18,10 @@ appElement = document.getElementById('app');
 galleryElement = document.getElementById('gallery');
 
 // importo os components criados
-HelloWorldComponent = require('./modules/HelloWorld.js');
-// PhotoComponent = require('./modules/Photo.js');
-// LikePhotoComponent = require('./modules/LikePhoto.js');
-PhotoGalleryComponent = require('./modules/PhotoGallery.js');
+HelloWorldComponent = require('./components/HelloWorld.js');
+// PhotoComponent = require('./components/Photo.js');
+// LikePhotoComponent = require('./components/LikePhoto.js');
+PhotoGalleryComponent = require('./components/PhotoGallery.js');
 
 // renderizo os components no DOM
 ReactDOM.render(<HelloWorldComponent />, appElement);
