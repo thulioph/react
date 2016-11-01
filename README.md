@@ -4,6 +4,7 @@ Algumas anotações a respeito do estudo com React.
 
 ### Executando o servidor localmente
 
+- `npm install`
 - `npm start`
 
 ### Usando
@@ -12,14 +13,6 @@ Algumas anotações a respeito do estudo com React.
 - JSX
 - Webpack
 - React Router
-
-### Setup
-
-- `npm init`
-- `npm install --save react react-dom react-router`
-- `npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-es2015`
-- `npm install --save-dev webpack http-server webpack-dev-server`
-- `npm install webpack -g`
 
 ### Explicações
 
