@@ -5,14 +5,36 @@
     <title>React - Hello World</title>
 
     <style>
+        .thumb {
+            float: right;
+            width: 200px;
+            height: 200px;
+            /*background: red;*/
+            margin: 5px;
+            text-align: center;
+            opacity: .8;
+            position: relative;
+            background-color: black
+        }
+
         .thumb img {
-            width: 40%;
-            display: block;
+            width: 100%;
+            display: inline-block;
             margin-bottom: 10px;
+            /*height: 40%;*/
+        }
+
+        .thumb.active {
+            opacity: 1;
         }
 
         button.active {
             color: red;
+        }
+
+        button {
+            display: block;
+            padding: 5px;
         }
     </style>
 </head>

@@ -31,4 +31,3 @@ ReactDOM.render(<HelloWorldComponent />, appElement);
 // ReactDOM.render(<LikePhotoComponent src='http://25.media.tumblr.com/tumblr_lqo2x2kF0L1qb7evco1_1280.png' caption='Curtiu o gatinho?' />, likePhotoElement);
 
 ReactDOM.render(<PhotoGalleryComponent />, galleryElement);
-

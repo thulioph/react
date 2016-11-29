@@ -23,21 +23,23 @@ LikePhoto = React.createClass({
     },
 
     render: function() {
-        var buttonClass;
+        var buttonClass, thumbClass;
 
         buttonClass = this.state.liked ? 'active' : 'inactive';
+        thumbClass = this.state.liked ? 'thumb active' : 'thumb inactive';
 
         return (
-                <div className="thumb">
+                <div className={thumbClass}>
                     <img src={this.props.src} />
 
                     <div className="bar">
+                        <span>{this.props.caption}</span>
+
                         <button
                             onClick={this.toggleLiked}
                             className={buttonClass}>
                             ♥
                         </button>
-                        <span>{this.props.caption}</span>
                     </div>
                 </div>
             )
