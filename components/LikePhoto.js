@@ -3,15 +3,16 @@
 // e uma legenda
 //
 
-var React, LikePhoto;
+var React, LikePhoto, PhotosApi;
 
 React = require('react');
+PhotosApi = require('../services/PhotosApi.js');
 
 LikePhoto = React.createClass({
     getInitialState: function() {
         return {
             liked: false
-        }
+        };
     },
 
     toggleLiked: function() {
@@ -22,15 +23,29 @@ LikePhoto = React.createClass({
         console.warn('Curti a foto com o ID:', this.props.id);
     },
 
+    handleSubmit: function() {
+        PhotosApi.get().then(function(result) {
+            this.props.updateUser(result.data);
+        }.bind(this));
+    },
+
     render: function() {
-        var buttonClass, thumbClass;
+        var buttonClass;
 
         buttonClass = this.state.liked ? 'active' : 'inactive';
-        thumbClass = this.state.liked ? 'thumb active' : 'thumb inactive';
 
         return (
-                <div className={thumbClass}>
-                    <img src={this.props.src} />
+
+                <div className="thumb">
+                    <button
+                        onClick={this.handleSubmit}>
+
+                        get photos
+                    </button>
+
+                    <img
+                        src={this.props.src}
+                    />
 
                     <div className="bar">
                         <span>{this.props.caption}</span>
@@ -40,6 +55,7 @@ LikePhoto = React.createClass({
                             className={buttonClass}>
                             ♥
                         </button>
+
                     </div>
                 </div>
             )
