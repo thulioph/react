@@ -9,32 +9,42 @@
             float: right;
             width: 200px;
             height: 200px;
-            /*background: red;*/
             margin: 5px;
             text-align: center;
-            opacity: .8;
+            opacity: .6;
             position: relative;
-            background-color: black
+
+            transition: opacity, .25s, linear, 0s;
         }
 
         .thumb img {
             width: 100%;
             display: inline-block;
             margin-bottom: 10px;
-            /*height: 40%;*/
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
         }
 
         .thumb.active {
             opacity: 1;
         }
 
-        button.active {
-            color: red;
+        .bar {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
         }
 
         button {
             display: block;
             padding: 5px;
+        }
+
+        button.active {
+            color: red;
         }
     </style>
 </head>
